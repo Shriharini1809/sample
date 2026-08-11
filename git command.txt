@@ -1,0 +1,213 @@
+
+PS D:\GIT-SAMPLE--> git remote add origin https://github.com/Shriharini1809/sample
+error: remote origin already exists.
+PS D:\GIT-SAMPLE--> git remote -v
+origin  https://github.com/Shriharini1809/sample (fetch)
+origin  https://github.com/Shriharini1809/sample (push)
+PS D:\GIT-SAMPLE--> git branch
+* master
+PS D:\GIT-SAMPLE--> git branch -M main
+PS D:\GIT-SAMPLE--> git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 235 bytes | 235.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Shriharini1809/sample
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+PS D:\GIT-SAMPLE--> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS D:\GIT-SAMPLE--> git log
+commit 8c1c704e08bacd4a0e35de19c3e4e3e28c56eec9 (HEAD -> main, origin/main)
+Author: Shriharini1809 <shriharini1809@gmail.com>
+Date:   Wed Aug 5 18:51:58 2026 +0530
+
+    Testing
+PS D:\GIT-SAMPLE--> git push -u origin main
+branch 'main' set up to track 'origin/main'.
+Everything up-to-date
+PS D:\GIT-SAMPLE--> git add .
+PS D:\GIT-SAMPLE--> git commit -m "test"
+[main 79957a0] test
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+PS D:\GIT-SAMPLE--> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 273 bytes | 273.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Shriharini1809/sample
+   8c1c704..79957a0  main -> main
+PS D:\GIT-SAMPLE--> git log
+commit 79957a051c6963b5f2a728140396699568f40ed3 (HEAD -> main, origin/main)
+Author: Shriharini1809 <shriharini1809@gmail.com>
+Date:   Wed Aug 5 19:51:30 2026 +0530
+
+    test
+
+commit 8c1c704e08bacd4a0e35de19c3e4e3e28c56eec9
+Author: Shriharini1809 <shriharini1809@gmail.com>
+Date:   Wed Aug 5 18:51:58 2026 +0530
+
+    Testing
+PS D:\GIT-SAMPLE--> git log --oneline
+79957a0 (HEAD -> main, origin/main) test
+8c1c704 Testing
+PS D:\GIT-SAMPLE--> git diff
+PS D:\GIT-SAMPLE--> git add .
+PS D:\GIT-SAMPLE--> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   readme.md.txt
+
+PS D:\GIT-SAMPLE--> git diff
+PS D:\GIT-SAMPLE--> git diff --staged
+diff --git a/readme.md.txt b/readme.md.txt
+index a946311..5467ef9 100644
+--- a/readme.md.txt
++++ b/readme.md.txt
+@@ -1,2 +1,3 @@
+ Testing Repository
+-Shri Harini J
+\ No newline at end of file
++Shri Harini J
++Akash Ram J
+\ No newline at end of file
+PS D:\GIT-SAMPLE--> git diff
+diff --git a/readme.md.txt b/readme.md.txt
+index 5467ef9..ce36592 100644
+--- a/readme.md.txt
++++ b/readme.md.txt
+@@ -1,3 +1,4 @@
+ Testing Repository
+ Shri Harini J
+-Akash Ram J
+\ No newline at end of file
++Akash Ram J
++Raja Arun S
+\ No newline at end of file
+PS D:\GIT-SAMPLE--> git diff
+diff --git a/readme.md.txt b/readme.md.txt
+index 5467ef9..ce36592 100644
+--- a/readme.md.txt
++++ b/readme.md.txt
+@@ -1,3 +1,4 @@
+ Testing Repository
+ Shri Harini J
+-Akash Ram J
+\ No newline at end of file
++Akash Ram J
++Raja Arun S
+\ No newline at end of file
+PS D:\GIT-SAMPLE--> git commit -m "test"
+[main e86c28b] test
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+PS D:\GIT-SAMPLE--> git restore
+fatal: you must specify path(s) to restore
+PS D:\GIT-SAMPLE--> git restore readme.md.txt
+PS D:\GIT-SAMPLE--> git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS D:\GIT-SAMPLE--> git init
+Reinitialized existing Git repository in D:/GIT-SAMPLE--/.git/
+PS D:\GIT-SAMPLE--> git branch
+* main
+PS D:\GIT-SAMPLE--> git branch
+* main
+PS D:\GIT-SAMPLE--> git branch vlan-config
+PS D:\GIT-SAMPLE--> git branch
+* main
+  vlan-config
+PS D:\GIT-SAMPLE--> git switch vlan-config
+Switched to branch 'vlan-config'
+PS D:\GIT-SAMPLE--> git branch
+  main
+* vlan-config
+PS D:\GIT-SAMPLE--> git push -u origin vlan-config
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 286 bytes | 286.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'vlan-config' on GitHub by visiting:
+remote:      https://github.com/Shriharini1809/sample/pull/new/vlan-config
+remote:
+To https://github.com/Shriharini1809/sample
+ * [new branch]      vlan-config -> vlan-config
+branch 'vlan-config' set up to track 'origin/vlan-config'.
+PS D:\GIT-SAMPLE--> git switch -c branch cisco
+fatal: invalid reference: cisco
+PS D:\GIT-SAMPLE--> git switch -c cisco
+Switched to a new branch 'cisco'
+PS D:\GIT-SAMPLE--> git push -u origin cisco
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'cisco' on GitHub by visiting:
+remote:      https://github.com/Shriharini1809/sample/pull/new/cisco
+remote:
+To https://github.com/Shriharini1809/sample
+ * [new branch]      cisco -> cisco
+branch 'cisco' set up to track 'origin/cisco'.
+PS D:\GIT-SAMPLE--> git add .
+PS D:\GIT-SAMPLE--> git commit -m "Testing"
+On branch cisco
+Your branch is up to date with 'origin/cisco'.
+
+nothing to commit, working tree clean
+PS D:\GIT-SAMPLE--> git add .
+PS D:\GIT-SAMPLE--> git commit -m "added"
+[cisco 10c51a0] added
+ 1 file changed, 2 insertions(+)
+ create mode 100644 New Text Document.txt
+PS D:\GIT-SAMPLE--> git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 293 bytes | 293.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Shriharini1809/sample
+   e86c28b..10c51a0  cisco -> cisco
+PS D:\GIT-SAMPLE--> git switch main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+PS D:\GIT-SAMPLE--> git branch
+  cisco
+* main
+  vlan-config
+PS D:\GIT-SAMPLE--> git merge cisco
+Updating e86c28b..10c51a0
+Fast-forward
+ New Text Document.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 New Text Document.txt
+PS D:\GIT-SAMPLE--> git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS D:\GIT-SAMPLE--> git push
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Shriharini1809/sample
+   79957a0..10c51a0  main -> main
+PS D:\GIT-SAMPLE--> git branch -d cisco
+Deleted branch cisco (was 10c51a0).
+PS D:\GIT-SAMPLE--> git push
+Everything up-to-date
+PS D:\GIT-SAMPLE--> git branch
+* main
+  vlan-config
+PS D:\GIT-SAMPLE--> git push origin --delete cisco
+To https://github.com/Shriharini1809/sample
+ - [deleted]         cisco
+PS D:\GIT-SAMPLE-->
